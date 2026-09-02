@@ -1,0 +1,85 @@
+24-08-2026
+===========
+Route 53 & ACM
+
+App --- Domain (.com, .edu, .gov.in,....) ---- www.zomato.com
+
+https	- SECURE - Certificate - which verifies that domain is valid and authenticated - ACM (Amazon Certificate Manager)
+http		- NOT SECURE
+
+Route 53 is a DNS (Domain Name System) Service
+53 is the DNS port number
+
+Route 53 is a global service
+
+Hosted Zones
+Private hosted zone	- if you want to access a website within a network
+Public hosted zone	- if you want website to be accessible by the end users
+
+Records
+Default records - NS, SOA - to host our application
+
+A Record
+AAAA Record
+CNAME Record - billable
+Alias Record - free
+MX Record...
+
+EC2 Instance (Public IP) -----> LB URL
+				IPv4
+				IPv6
+
+A Record
+www.zomato.com	------> IPv4
+IPv4	-----> www.zomato.com
+
+AAAA Record
+www.zomato.com	------> IPv6
+IPv6	-----> www.zomato.com
+
+CNAME
+Valid certificate
+
+Routing Policies;
+Simple routing policy - performs no health checks
+Failover routing policy - for HA
+	Mumbai			N.Virginia
+	X				/
+Geolocation routing policy -
+Latency based routing policy
+Weighted routing policy
+	100%
+		70% ---- Mumbai Server
+		30% ---- N.Viriginia Server
+Multi value routing policy - same as simple routing policy with health checks
+
+
+VPC - Virtual Private Cloud
+VPC is a region specific service
+5 VPCs/region
+
+VPC - Network
+Subnets
+IGW
+NATGW**
+Elastic IP**
+Route Tables
+
+IP - Internet Protocol
+IP address
+Based on version;
+IPv4 = 32 bits = 4 bytes
+IPv6 = 128 bits = 16 bytes
+
+Based on visibility;
+	Public IP - external communication
+	Private IP - internal communication
+
+CIDR - Classless Inter Domain Range/Routing
+Subnet Masking
+192.168.2.2/16
+192.168.2.2/24
+
+Lower the number - higher will be the IP
+
+Out of the total IPs you are getting, 5 IPs will be reserved by AWS (first 3 IPs and last 2 IPs)

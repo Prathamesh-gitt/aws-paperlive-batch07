@@ -1,0 +1,21 @@
+25-08-2026
+===========
+ssh -i /home/ec2-user/private-server.pem ec2-user@10.0.2.25
+
+VPC Endpoints - from the network (VPC) if the private server wants to communicate only with the AWS services
+
+To connect with AWS Cloud, we have 3 ways;
+Console
+CLI (Command Line Interface) - Commands
+Programmatic Access
+
+AWS CLI Commands (Reference)
+https://chatgpt.com/share/6a8dba72-0674-83ee-bc59-01122d926099
+
+=========
+RDS - Relational Database Service
+
+Docker - Docker Containers
+Kubernetes - StatefulSet
+
+	

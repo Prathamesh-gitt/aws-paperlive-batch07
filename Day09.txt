@@ -1,0 +1,28 @@
+27-08-2026
+===========
+VPC Peering
+ssh -i /home/ec2-user/private-server.pem ec2-user@10.0.2.25
+
+Cloud Watch & Cloud Trail
+==================
+CW is a resource monitoring service
+
+Alarms
+Events
+Logs
+
+Basic Monitoring		- every 5 minutes data points will be updated - FREE
+Detailed Monitoring	- every minute data points will be updated - BILLABLE
+
+Alarms has 3 states
+	InAlarm			- >90%
+	OK				- <90%
+	Insufficient Data	- EC2 Stopped
+
+EC2 ----> CPU>90% -----> SNS
+
+Composite Alarms - combination of multiple states of a resource - conditions (AND / OR)
+CW alarms are usually single metric
+
+Events - is an activity
+Cloud Trail
