@@ -1,0 +1,147 @@
+04-09-2026
+===========
+What is OS?
+OS is a software which is used to interact with the machine (laptop/mobile/desktop/server...)
+OS acts as a mediator b/w user and the machine
+OS is mandatory to use any device/machine
+OS provides an environment to run the applications
+
+Types of OS;
+Windows, Mac, Android, Linux, Ubuntu, RedHat...
+
+Windows Vs Linux;
+Windows is a single user based OS
+Linux is a multi-user based OS
+
+Windows is premium 
+Linux is free and Open Source
+
+Windows doesn't have better security features
+Linux is fully secure
+
+Windows is GUI based
+Linux is CLI (Command Line Interface) based
+
+Windows is recommended for personal use
+Linux is for professional use
+
+Windows is developed and owned by Microsoft
+Linux is developed by Linus Torvalds
+
+Note: all Linux commands are case sensitive
+
+Linux distributions/flavours;
+A Linux distribution/flavour is an OS that is built on top of the Linux kernel
+AWS - AMIs - RPM based (RedHat, CentOS, Amazon Linux) - yum
+			- Debian based (Suse, Ubuntu) - apt
+
+Usernames;
+Linux ---- ec2-user
+Ubuntu ---- ubuntu
+
+Linux ---- /home/ec2-user
+Ubuntu --- /home/ubuntu
+
+    1  cat /etc/os-release
+    2  pwd
+    3  date
+    4  cal
+    5  cal 2026
+    6  cal JAN 2026
+    7  cal DEC 2026
+    8  cal 01 2026
+    9  cal -3
+   10  cal -2
+   11  cal -4
+   12  cal -5
+   13  cal -1
+   14  cal
+   15  history
+history -d 10
+!15
+!!
+history -c
+clear (or) control + l
+
+Users in Linux;
+ec2-user		- least privileges
+root			- will have all privileges 
+
+whoami
+who
+w
+
+yum install git -y
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+
+sudo yum install git -y
+
+ec2-user ----- /home/ec2-user
+sudo su ---- root ---- /home/ec2-user
+sudo -s ---- root ---- /home/ec2-user
+sudo su - ---- root ---- /root
+sudo -i ---- root ---- /root
+
+$ - normal user
+# - root user
+
+exit or control+d or logout
+
+man pwd
+pwd --help
+
+cd /
+ls
+bin  boot  dev  etc  home  lib  lib64  local  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+
+bc
+sudo yum install bc -y
+control+c
+
+
+In Linux, every we create comes under two categories;
+	Directories
+	Files
+
+mkdir kastro
+mkdir kiran kk linux ubuntu
+mkdir -v folder1
+mkdir "learn with kastro"
+mkdir learn_with_kastro
+
+tree
+tree folder1/
+
+rmdir folder4
+rm -rf folder2/
+
+mv folder1 folder1.1
+
+mkdir -p parent/child1/child2/chidl3/child4
+
+cd -
+
+alias m="mkdir"
+
+File creation;
+touch
+cat
+vi / nano
+echo
+
+touch kastro.txt --- used to create empty files
+
+ls
+ls -l
+ll
+
+cat > kastro.txt --- used to write the data in the file
+
+cat kastro.txt
+tac kastro.txt
+cat -n kastro.txt
+
+
+
+
+			

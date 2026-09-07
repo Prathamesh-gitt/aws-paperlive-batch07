@@ -1,0 +1,44 @@
+Mounting S3 Bucket on to VM
+==============================
+=> Create an S3 Bucket with Versioning Enabled
+mount-s3 flipkart-ml-training-kastro
+
+=> Upload 2-3 files into the bucket
+
+=> Create an S3 File System
+Open "flipkart-ml-training-kastro" bucket
+Go to File systems - new tab (or Access Points → File systems)
+Click Create file system ----> File system name: flipkart-ml-filesystem ----> Create
+
+Note the file system ID
+
+=> Launch an EC2 Instance - Amazon Linux 2023, Attach IAM Role with S3 Full Access Policy
+
+=> Mount the S3 File System on EC2
+Install Mountpoint for Amazon S3:
+sudo dnf install -y mount-s3
+
+Create a mount directory:
+mkdir ~/s3-mount
+
+Mount the bucket:
+mount-s3 flipkart-ml-training-kastro ~/s3-mount
+
+Verify:
+df -h
+
+ls ~/s3-mount
+You will see the files in bucket
+
+Create a test file:
+echo "Hello S3" > ~/s3-mount/test.txt
+Go to bucket and refresh, you will see "test.txt" file
+
+Also, upload an object in S3 bucket ----> Goto VM and verify using "ls" command
+
+=> Unmount on the EC2 instance:
+umount ~/s3-mount
+
+S3 → flipkart-ml-training-kastro → File systems tab → Select flipkart-ml-filesystem → Delete
+EC2 → Terminate flipkart-ml-worker
+S3 → Empty and delete flipkart-ml-training-kas
